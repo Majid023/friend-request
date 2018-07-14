@@ -1,0 +1,19 @@
+{
+  "name": "friend-request",
+  "version": "1.0.0",
+  "description": "database handle",
+  "main": "app/app.js",
+  "scripts": {
+    "start": "nodemon -e ejs,js,css,json app/app.js --watch app"
+  },
+  "author": "Majid Ansari , Pagu Kumari , Supu Kumari",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mongodb": "^3.1.1",
+    "nodemon": "^1.18.1",
+    "reload": "^2.3.0",
+    "vue": "^2.5.16"
+  }
+}
