@@ -1,47 +1,25 @@
 
-new Vue({
 
-	el:'#app',
-    
-    data :{
+    el : '#app',
 
-        message : 'hello world',
-        data:function(){
-        
-            axios.post('/friendlist', { data: this.data })
-                .then(function (response) {
-                    console.log(response);
-                    // this.fromServer=response.data;
-                    // fromServer=response.data;
-                    // this.fromServer=response.data;
-                    return response.data;
-    
-                })
-                .catch(function (error) {
-                    // Wu oh! Something went wrong
-                    console.log(error.message);
-                    return false;
-                });
         },
-        
-    
-    },
-	methods: {
-    buttonClicked: function(){
-        
-        axios.post('/friendlist', { data: this.data })
-            .then(function (response) {
-                console.log(response);
-                // this.fromServer=response.data;
-                // fromServer=response.data;
-                // this.fromServer=response.data;
+    data :  {
+                message : "Hello world",
+                datastorage : [],
+                isActive :false
+            },
 
-            })
-            .catch(function (error) {
-                // Wu oh! Something went wrong
-                console.log(error.message);
-            });
-    }
-}
+	methods : {
 
-})
+                buttonClicked: function(event){
+                        axios.post('/friendlist', { data: this.data }).then( function( response ) {
+                                console.log(response);
+                                this.datastorage=response.data;
+                        }).catch(  function(error) {
+                             // Wu oh! Something went wrong
+                            console.log(error.message);
+                        });
+                    }   
+                },
+
+});
