@@ -4,18 +4,27 @@
         <% include templates/head.ejs %>
     </head>
 	<body>
-	<div id="app" >
-		<div id="container--1" class="carousel"data-flickity>
-			<div class="carousel-cell"></div>
+	<div id="app"  >
+		<div class="carousel"data-flickity>
+		 <div class="carousel-cell">
+		 dfdfsfs
+		 </div>
+		 <div class="carousel-cell">
+		 dfdfsfs
+		 </div>
+		 <div class="carousel-cell">
+		 dfdfsfs
+		 </div>
 	    </div>
 
-	<div class="container-fluid">
-		<div class="row button--1">
-			<a href="#" class="btn-1">Friend list</a>
+		<div class="container-fluid">
+			<div class="row button--1">
+				<a href="#" class="btn-1">Friend list</a>
+			</div>
 		</div>
+    	<button @click="buttonClicked()">click me</button>
 	</div>
-    <button @click="buttonClicked()">click me</button>
-	</div>
+
     <% include templates/jsdefault.ejs %>
 	</body>
 </html>
